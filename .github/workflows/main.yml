@@ -30,4 +30,4 @@ jobs:
             
             npm install
             
-            pm2 restart mi-backend
+            pm2 restart bobsbakend
