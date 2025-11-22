@@ -15,7 +15,6 @@ function cornRateLimiter(req, res, next) {
     );
 
     if (timeElapsed < ONE_MINUTE_IN_MS) {
-      // El límite se ha excedido. Devolver 429.
       console.log(
         `[RATE LIMIT] IP: ${clientIp} - Compra bloqueada. Tiempo restante: ${timeRemainingSeconds}s`
       );

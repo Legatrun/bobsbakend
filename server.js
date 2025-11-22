@@ -17,13 +17,13 @@ app.use(
 app.use(express.json());
 app.set("trust proxy", 1);
 
-app.get("api/", (req, res) => {
+app.get("/api/", (req, res) => {
   res.status(200).json({
     message: "¡Welcome to Bob's corn API, use POST /buy-corn 🌽",
   });
 });
 
-app.post("api/buy-corn", cornRateLimiter, (req, res) => {
+app.post("/api/buy-corn", cornRateLimiter, (req, res) => {
   res.status(200).json({
     message: "¡Successful purchase! 🌽",
     success: true,
